@@ -1,5 +1,14 @@
 {% extends 'base.html' %}
 
 {% block 'content' %}
-    <h1>Prof</h1>
+    <h1>Les Professeurs</h1>
+    
+    {% for Prof in Profs %}
+        Photo: <br>
+        Nom: {{ Prof.Nom }} 
+        Prenom(s): {{ Prof.Prenoms }}
+        Diplomes:  {{ Prof.Diplomes }}
+        Classes: {{ Prof.Classes }}
+
+    {% endfor %}
 {% endblock %}
